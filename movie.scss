@@ -1,0 +1,283 @@
+@mixin zeroSize {
+    width: 0;
+    height: 0;
+}
+@mixin noBigStar($color:rgb(255, 255, 255), $size:40px) {
+    @include zeroSize;
+    margin: $size/2 0;
+    position: relative;
+    display: block;
+    color: $color;
+    border-right: $size solid transparent;
+    border-bottom: $size/100*70 solid $color;
+    border-left: $size solid transparent;
+    transform: rotate(35deg);
+    &:before {
+        @include zeroSize;
+        border-bottom: $size/100*80 solid $color;
+        border-left: $size/100*30 solid transparent;
+        border-right: $size/100*30 solid transparent;
+        position: absolute;
+        top: -$size/100*45;
+        left: -$size/100*65;
+        display: block;
+        content: '';
+        transform: rotate(-35deg);
+    }
+    &:after {
+        position: absolute;
+        display: block;
+        color: $color;
+        top: $size/100*2;
+        left: -$size/100*105;
+        @include zeroSize;
+        border-right: $size solid transparent;
+        border-bottom: $size/100*70 solid $color;
+        border-left: $size solid transparent;
+        transform: rotate(-70deg);
+        content: '';
+    }
+ }
+
+
+@mixin bigStar($color:rgb(241, 12, 12), $size:40px) {
+    @include zeroSize;
+    margin: $size/2 0;
+    position: relative;
+    display: block;
+    color: $color;
+    border-right: $size solid transparent;
+    border-bottom: $size/100*70 solid $color;
+    border-left: $size solid transparent;
+    transform: rotate(35deg);
+    &:before {
+        @include zeroSize;
+        border-bottom: $size/100*80 solid $color;
+        border-left: $size/100*30 solid transparent;
+        border-right: $size/100*30 solid transparent;
+        position: absolute;
+        top: -$size/100*45;
+        left: -$size/100*65;
+        display: block;
+        content: '';
+        transform: rotate(-35deg);
+    }
+    &:after {
+        position: absolute;
+        display: block;
+        color: $color;
+        top: $size/100*2;
+        left: -$size/100*105;
+        @include zeroSize;
+        border-right: $size solid transparent;
+        border-bottom: $size/100*70 solid $color;
+        border-left: $size solid transparent;
+        transform: rotate(-70deg);
+        content: '';
+    }
+ }
+
+
+@mixin noStar($color:rgb(255, 255, 255), $size:15px) {
+    @include zeroSize;
+    margin: $size/2 0;
+    position: relative;
+    display: block;
+    color: $color;
+    border-right: $size solid transparent;
+    border-bottom: $size/100*70 solid $color;
+    border-left: $size solid transparent;
+    transform: rotate(35deg);
+    &:before {
+        @include zeroSize;
+        border-bottom: $size/100*80 solid $color;
+        border-left: $size/100*30 solid transparent;
+        border-right: $size/100*30 solid transparent;
+        position: absolute;
+        top: -$size/100*45;
+        left: -$size/100*65;
+        display: block;
+        content: '';
+        transform: rotate(-35deg);
+    }
+    &:after {
+        position: absolute;
+        display: block;
+        color: $color;
+        top: $size/100*2;
+        left: -$size/100*105;
+        @include zeroSize;
+        border-right: $size solid transparent;
+        border-bottom: $size/100*70 solid $color;
+        border-left: $size solid transparent;
+        transform: rotate(-70deg);
+        content: '';
+    }
+ }
+
+@mixin star($color:red, $size:15px) {
+    @include zeroSize;
+    margin: $size/2 0;
+    position: relative;
+    display: block;
+    color: $color;
+    border-right: $size solid transparent;
+    border-bottom: $size/100*70 solid $color;
+    border-left: $size solid transparent;
+    transform: rotate(35deg);
+    &:before {
+        @include zeroSize;
+        border-bottom: $size/100*80 solid $color;
+        border-left: $size/100*30 solid transparent;
+        border-right: $size/100*30 solid transparent;
+        position: absolute;
+        top: -$size/100*45;
+        left: -$size/100*65;
+        display: block;
+        content: '';
+        transform: rotate(-35deg);
+    }
+    &:after {
+        position: absolute;
+        display: block;
+        color: $color;
+        top: $size/100*2;
+        left: -$size/100*105;
+        @include zeroSize;
+        border-right: $size solid transparent;
+        border-bottom: $size/100*70 solid $color;
+        border-left: $size solid transparent;
+        transform: rotate(-70deg);
+        content: '';
+    }
+ }
+ body{
+     background:rgb(190, 181, 181);
+     margin: 0;
+     height: 100vh;
+
+ }
+ .container{
+     display:flex;
+     flex-direction: column;
+     overflow: auto;
+     width:400px ;
+     height: 100vh;
+     :hover{
+         background-color:rgb(87, 61, 79);
+     }
+
+ }
+ .aflam{
+     width: 300px;
+     height: 300px;
+     background-color:rgb(163, 137, 137);
+     border:1px solid black;
+     margin:5px;
+     }
+     h1{
+         text-align: center;
+     }
+     p{
+       text-align: center;
+     }
+     
+     ul{
+         display: flex;
+         flex-direction: row;
+         text-align: center;
+            
+         
+     }
+ 
+.bigContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
+
+.content{
+    width: 100%;
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    .bild1{
+        width: 80%;
+        height: 80%;
+        background: gray;
+        box-shadow:20px 20px 10px black; 
+        background-image: url('1_Lh-tImaquWVDSUyQfvyksQ.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0px;
+        padding: 0px;
+        .bild2{
+            width: 100%;
+            height: 100%;
+            background:rgba(100, 29, 29, 0.739);
+            display: flex;
+            flex-direction: row;
+            margin: 0px;
+            padding: 0px;
+
+            .text{
+
+                width: 60%;
+                height: 100%;
+                
+                h1{
+                    text-align: left;
+                    margin: 0px;
+                    padding: 20px;
+                    color: white;
+                }
+                p{
+                    text-align: left;
+                    padding: 20px;
+                    margin: 0;
+                    color: white;
+
+                }
+            }
+
+            .photo{
+                width: 40%;
+                height: 100%;
+                
+
+                img{
+                    width: 60%;
+                    height: 60%;
+                    padding-top: 40px;
+                    padding-left: 160px;
+                    
+                    
+                }
+            }
+            
+        }
+
+    }
+}
+ .star{
+     @include star;
+ }
+
+ .keineStar{
+     @include noStar;
+ }
+
+ .bigStar{
+    @include bigStar;
+ }
+ .noBigStar{
+    @include noBigStar;
+ }
+ 
+ 
